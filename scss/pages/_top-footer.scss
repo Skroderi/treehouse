@@ -1,0 +1,64 @@
+.top-footer {
+    padding: $padding-sections;
+    background-color: #222222;
+    color: white;
+}
+
+.category {
+    @include box-flex(column, center);
+}
+
+
+
+.category ul {
+    list-style-type: none;
+    margin: 0 auto;
+}
+
+.category__item {
+    width: 80%;
+    text-align: center;
+}
+
+.category__item h2 {
+    padding: 30px 0px 30px 0px;
+}
+
+.category__contact h2 {
+    padding-top: 0px;
+}
+
+.category__item ul li {
+    @include box-flex(row, left);
+    padding: 10px 10px 10px 0px;
+}
+
+.category__item ul li img {
+    padding-right: 15px;
+}
+
+.category__tweets ul li p {
+    max-width: 230px;
+}
+
+.category__contact ul li:nth-child(1) p {
+    max-width: 90px;
+}
+
+@media(min-width:600px) {
+    .category {
+        @include box-flex(row, space-around);
+
+    }
+
+    .category__item {
+        width: 25%;
+        text-align: left;
+        align-self: flex-start;
+        max-width: 350px;
+    }
+
+    .category__item h2 {
+        padding: 0px 0px 30px 0px;
+    }
+}

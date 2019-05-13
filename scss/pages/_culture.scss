@@ -1,0 +1,48 @@
+.culture {
+    padding: $padding-sections;
+    background: #f9f9f9;
+}
+
+.culture h1 {
+
+    @include section-header;
+    font-size: 30px;
+}
+
+.culture__p {
+    text-align: center;
+}
+
+.icons {
+    @include box-flex(row, space-around);
+    width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.icons__item {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.icons__item img {
+    margin: 0 auto;
+}
+
+.clients__item__opinion {
+    max-width: 450px;
+    margin-top: 20px;
+    padding: 30px;
+    background-color: $color-greybgc
+}
+
+@media(min-width:600px) {
+    .icons__item {
+        width: 30%;
+    }
+
+    .culture h1 {
+        font-size: 40px;
+    }
+
+}

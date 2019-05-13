@@ -1,0 +1,48 @@
+.services {
+    width: 100%;
+    padding: $padding-sections;
+
+    h1 {
+        font-family: Montserrat;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+    }
+
+    p {
+        text-align: center;
+        color: $color-grey;
+        margin-bottom: 20px;
+    }
+}
+
+.services__items {
+    @include box-flex(row, center);
+    flex-wrap: wrap;
+}
+
+.services__item {
+    @include box-flex(column, center);
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 270px;
+    font-family: $font-mont;
+
+    img {
+        padding-top: 40px;
+    }
+
+    h2 {
+
+        text-transform: uppercase;
+        padding: 10px 0px 10px 0px;
+    }
+
+}
+
+@media(min-width:500px) {
+    .services h1 {
+        font-size: 40px;
+    }
+}

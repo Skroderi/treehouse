@@ -1,0 +1,49 @@
+@mixin fixed-nav() {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+@mixin box-flex($direction, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center;
+}
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin section-header {
+    color: $color-darkgrey;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@mixin button {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 200px;
+    line-height: 60px;
+    color: $color-white;
+    background-color: $color-green;
+    border: none;
+    border-radius: 50px;
+    letter-spacing: -0.37px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-white;
+        color: $color-green;
+    }
+}

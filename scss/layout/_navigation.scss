@@ -1,0 +1,97 @@
+nav {
+    @include box-flex(row, space-between);
+    @include fixed-nav;
+    background-color: $color-white;
+    list-style: none;
+    height: 55px;
+    z-index: 999;
+    align-self: center;
+
+    .nav {
+        @include box-flex(row, space-between);
+        width: 100%;
+        max-width: 940px;
+        margin: 0 auto;
+    }
+
+    ul {
+        @include box-flex(row, space-around);
+        list-style: none;
+
+        li {
+            width: 25%
+        }
+
+        a {
+            display: block;
+            color: $color-grey;
+            font-family: 'Montserrat';
+            font-size: 15px;
+            font-weight: 400;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 3px;
+            margin-right: 20px;
+            transition: .2s
+        }
+
+        a:hover {
+            transform: scale(1.2)
+        }
+    }
+}
+
+.hamburger {
+    font-size: 24px;
+    margin-right: 10px;
+    display: none;
+}
+
+.logo {
+    @include box-flex(row, center);
+    text-decoration: none;
+
+    .logo__text {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 41px;
+        text-transform: uppercase;
+        color: $color-darkgrey;
+        /* Text style for "T, reehous" */
+        letter-spacing: -0.45px;
+    }
+
+    .logo__img {
+        position: relative;
+        background-color: $color-green;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        margin: 0px 5px 0px 10px;
+    }
+
+    img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+}
+
+/* ----------------------------------- */
+/* ---------- MEDIA QUERIES ---------- */
+/* ----------------------------------- */
+@media(min-width:750px) {
+    a {
+        font-size: 20px;
+        margin-right: 20px;
+    }
+
+    nav {
+        height: 80px;
+    }
+
+}
