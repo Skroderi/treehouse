@@ -22,18 +22,19 @@
                     <div class="logo__img"> <img src="./images/logo.png " alt=""></div>
                     <span class=" logo__text">treehouse</span>
                 </a>
-                <ul class="menu">
-                    <li class="menu__item"><a href="#">home</a></li>
-                    <li class="menu__item"><a href="#services">about</a></li>
-                    <li class="menu__item"><a href="#relax">blog</a></li>
-                    <li class="menu__item"><a href="#projects">portfolio</a></li>
-                    <li class="menu__item"><a href="#contact">contact</a></li>
-                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-angle-up off"></i>
+
+                </div>
             </div>
-            <div class="hamburger">
-                <i class="fas fa-bars">
-                </i>
-            </div>
+            <ul class="menu">
+                <li class="menu__item"><a href="#">home</a></li>
+                <li class="menu__item"><a href="#services">about</a></li>
+                <li class="menu__item"><a href="#relax">blog</a></li>
+                <li class="menu__item"><a href="#projects">portfolio</a></li>
+                <li class="menu__item"><a href="#contact">contact</a></li>
+            </ul>
         </nav>
         <header>
             <div class="description">
@@ -276,6 +277,8 @@
         </div>
     </section>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script>
         ScrollReveal({ reset: true });
         ScrollReveal().reveal('.services__item', { delay: 300 });
@@ -290,6 +293,13 @@
         ScrollReveal().reveal('.category__contact', { delay: 400 });
         ScrollReveal().reveal('.category__posts', { delay: 650 });
         ScrollReveal().reveal('.category__tweets', { delay: 850 });
+
+
+
+        $(".hamburger").on("click", function () {
+            $(".fas, nav, .menu").toggleClass("active");
+            $(".fas").toggleClass("off");
+        });
     </script>
 </body>
 

@@ -1,54 +1,65 @@
 nav {
+    // height: 30px;
+    max-width: 940px;
+}
+
+.nav {
     @include box-flex(row, space-between);
-    @include fixed-nav;
-    background-color: $color-white;
+    height: 50px;
+    transition: .3s;
+}
+
+.menu {
+    display: none;
+    // @include box-flex(column, space-around);
     list-style: none;
-    height: 55px;
-    z-index: 999;
-    align-self: center;
+}
 
-    .nav {
-        @include box-flex(row, space-between);
-        width: 100%;
-        max-width: 940px;
-        margin: 0 auto;
-    }
+.menu li {
+    width: 30%;
+    margin: $margin-center;
+    padding: 3px;
+}
 
-    ul {
-        @include box-flex(row, space-around);
-        list-style: none;
+.menu a {
+    display: block;
+    color: $color-grey;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 3px;
+    transition: .2s;
+    text-align: center;
+    width: 100%;
+}
 
-        li {
-            width: 25%
-        }
+li a:hover {
+    transform: scale(1.2)
+}
 
-        a {
-            display: block;
-            color: $color-grey;
-            font-family: 'Montserrat';
-            font-size: 15px;
-            font-weight: 400;
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 3px;
-            margin-right: 20px;
-            transition: .2s
-        }
+.active nav {
+    height: 200px;
+}
 
-        a:hover {
-            transform: scale(1.2)
-        }
-    }
+.active .menu {
+    display: block;
+}
+
+.off {
+    display: none;
 }
 
 .hamburger {
     font-size: 24px;
     margin-right: 10px;
-    display: none;
+    z-index: 999;
+    // display: none;
 }
 
 .logo {
-    @include box-flex(row, center);
+    @include box-flex(row, left);
     text-decoration: none;
 
     .logo__text {
@@ -85,13 +96,38 @@ nav {
 /* ---------- MEDIA QUERIES ---------- */
 /* ----------------------------------- */
 @media(min-width:750px) {
-    a {
-        font-size: 20px;
+    .menu li a {
+        font-size: 18px;
         margin-right: 20px;
     }
 
     nav {
+        @include box-flex(row, space-between);
         height: 80px;
+        margin: $margin-center;
     }
 
+    .logo {
+        line-height: 80px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .menu {
+        @include box-flex(row, space-around);
+    }
+
+    .active .menu {
+        @include box-flex(row, space-around);
+    }
+}
+
+@media(min-width:1300px) {
+
+    .menu li a {
+        font-size: 20px;
+        margin-right: 20px;
+    }
 }
